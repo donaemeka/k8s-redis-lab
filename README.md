@@ -39,8 +39,19 @@ k8s-redis-lab/
    - Set `nodePort: 30079` (adjustable).
 
    ![Service Status](images/redis-service.png)
+   
 
-3. **I Deployed to Kubernetes**
+3. **Verified Redis**
+   - Connected using `redis-cli` and tested connectivity.
+
+   - Command: `redis-cli -h 127.0.0.1 -p 6379 ping`
+
+   - Output: `PONG`
+
+   ![Redis PONG Test](images/redis-pong.png)
+
+
+4. **I Deployed to Kubernetes**
 
    kubectl apply -f redis-deployment.yaml
 
